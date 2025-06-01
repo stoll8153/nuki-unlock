@@ -27,5 +27,3 @@ def unlock():
         return jsonify({"success": True, "message": "Tür geöffnet!"})
     else:
         return jsonify({"error": "Fehler beim Öffnen", "details": r.text}), 500
-
-app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
