@@ -1,0 +1,14 @@
+
+services:
+  - type: web
+    name: nuki-unlock
+    env: python
+    buildCommand: ""
+    startCommand: python main.py
+    envVars:
+      - key: NUKI_API_TOKEN
+        sync: false
+      - key: LOCK_ID
+        sync: false
+      - key: SECRET_CODE
+        sync: false
